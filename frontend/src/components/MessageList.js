@@ -28,7 +28,7 @@ export const MessageList = () => {
     <React.Fragment>
       {messages.length > 0 ? (
         <React.Fragment>
-          {messages.map((message) => (
+          {messages.sort((a, b) => (a.timestamp < b.timestamp) ? 1 : -1).map((message) => (
             <div
               className="flex items-center bg-gray-100 mb-10 shadow"
               key={message.id}
