@@ -1,7 +1,7 @@
 import { GET_MESSAGES, ADD_MESSAGE, UPDATE_MESSAGE, DELETE_MESSAGE } from './types'
 import axios from 'axios';
 
-const apiUrl = 'http://localhost:3000';
+const apiUrl = process.env.REACT_APP_BASE_URL || 'http://localhost:3000';
 
 export const getMessages = () => {
     return async (dispatch) => {
